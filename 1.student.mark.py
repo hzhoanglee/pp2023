@@ -1,5 +1,17 @@
 import os
+"""
+courses = {}
+course = {'id': 1, 'name': "Math1"}
+courses[course['id']] = course
+course = {'id': 2, 'name': "Math2"}
+courses[course['id']] = course
 
+students = {}
+student = {'id': 9, 'name': 'Nguyen Van A', 'dob': '01/01/2000'}
+students[student['id']] = student
+student = {'id': 6, 'name': 'Nguyen Van B', 'dob': '01/01/2000'}
+students[student['id']] = student
+"""
 
 # Define Functions
 def assignMark(cID):
@@ -56,10 +68,6 @@ def listStudents():
     print("------------------")
 
 
-def clearScreen():
-    os.system("Clear")
-
-
 # Read from Keyboard
 number_of_students = 0
 students = {}
@@ -71,7 +79,6 @@ for i in range(number_of_students):
                'name': input("Enter Student name: "),
                'dob': input("Enter Student DOB: ")}
     students[student['id']] = student
-    clearScreen()
     print("Added Student: " + student['name'])
 
 
@@ -84,7 +91,6 @@ for i in range(number_of_courses):
     course = {'id': int(input("Enter Course ID: ")),
               'name': input("Enter Course Name: ")}
     courses[course['id']] = course
-    clearScreen()
     print("Added Course " + course['name'])
 
 # Options
@@ -99,7 +105,6 @@ while option_selected != 0:
     print("4. Show student marks for a given course")
     print("0. Exit")
     option_selected = int(input("Select an option: "))
-    clearScreen()
     if option_selected == 1:
         cID = int(input("Enter Course ID: "))
         assignMark(cID)
